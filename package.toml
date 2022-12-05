@@ -1,4 +1,6 @@
+name = "bash"
 version = "0.1.0"
+collection = "executor"
 bin = "/usr/bin/env bash"
 
 targets = ["worker"]
