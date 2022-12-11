@@ -3,11 +3,8 @@ version = "0.1.0"
 collection = "executor"
 bin = "/usr/bin/env bash"
 
-targets = ["worker"]
-
 collections = true
 tasks = true
 actions = true
 
-requirements = ["bash"]
-
+targets = ["worker"]
