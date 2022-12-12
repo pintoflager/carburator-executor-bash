@@ -1,10 +1,9 @@
 name = "bash"
 version = "0.1.0"
-collection = "executor"
-bin = "/usr/bin/env bash"
+collection = "Executor"
+targets = ["Worker"]
 
+bin = "/usr/bin/env bash"
 collections = true
 tasks = true
 actions = true
-
-targets = ["worker"]
