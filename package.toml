@@ -1,7 +1,7 @@
 name = "bash"
 version = "0.1.0"
 collection = "Executor"
-targets = ["Worker"]
+targets = ["Commander", "Worker"]
 
 bin = "/usr/bin/env bash"
 collections = true
