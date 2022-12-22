@@ -1,9 +1,10 @@
 name = "bash"
 version = "0.1.0"
 collection = "Executor"
-targets = ["Commander", "Worker"]
+project_roles = ["Commander", "Worker"]
 
-bin = "/usr/bin/env bash"
 collections = true
 tasks = true
 actions = true
+retry_times = 3
+retry_interval = 10
