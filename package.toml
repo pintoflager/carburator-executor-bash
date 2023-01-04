@@ -1,7 +1,7 @@
 name = "bash"
 version = "0.1.0"
 collection = "Executor"
-project_roles = ["Commander", "Worker"]
+platforms = ["Commander", "Worker"]
 
 collections = true
 tasks = true
