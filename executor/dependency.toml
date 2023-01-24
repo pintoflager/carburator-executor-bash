@@ -1,0 +1,7 @@
+[[dependent]]
+name = "sh"
+optional = false
+level = "Node"
+# version = Option<VersionReq>,
+# optional_with = Vec<String>,
+
