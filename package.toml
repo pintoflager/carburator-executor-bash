@@ -1,7 +1,7 @@
 name = "bash"
 version = "0.1.0"
 collection = "Executor"
-platforms = ["Commander", "Worker"]
+platforms = ["Client", "Commander", "Worker"]
 
 retry_times = 3
 retry_interval = 10

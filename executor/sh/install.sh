@@ -1,23 +1,28 @@
 #!/usr/bin/env sh
 
-platform="$1"
+role="$1"
 
-# App installation tasks on commander node. Runs first
-if [ "$platform" = 'commander' ]; then
-    carburator print terminal info "Executing install script on $platform"
+# App installation tasks on a local client node. Runs first
+if [ "$role" = 'client' ]; then
+    carburator print terminal info "Executing install script on $role"
 fi
 
 # App installation tasks on remote worker node.
-if [ "$platform" = 'worker' ]; then
-    carburator print terminal info "Executing install script on $platform"
+if [ "$role" = 'worker' ]; then
+    carburator print terminal info "Executing install script on $role"
+fi
+
+# App installation tasks on remote commander node.
+if [ "$role" = 'commander' ]; then
+    carburator print terminal info "Executing install script on $role"
 fi
 
 # Bash needs bash
-if ! carburator fn integration-installed bash; then
+if ! carburator has program bash; then
   carburator print terminal error \
     "Missing required program bash. Please install it before proceeding."
   exit 120
 fi
 
 # Just a reminder, to figure out where (any) script runs:
-# if [[ $(carburator node platform) == 'commander' ]]; then ...... ; fi
+# if [[ $(carburator node role) == 'commander' ]]; then ...... ; fi
