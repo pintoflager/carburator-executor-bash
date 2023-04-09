@@ -26,6 +26,7 @@ if carburator has program apt; then
     carburator sudo apt -y install bash
 
 elif carburator has program pacman; then
+    carburator sudo pacman update
     carburator sudo pacman -Suy bash
 
 elif carburator has program yum; then
