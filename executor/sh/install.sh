@@ -17,7 +17,8 @@ if ! carburator has program bash; then
     carburator print terminal error \
         "Missing required program bash. Trying to install..."
 else
-    exit
+    carburator print terminal success "Bash found from the client"
+    exit 0
 fi
 
 # TODO: Untested below
