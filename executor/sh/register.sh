@@ -23,20 +23,20 @@ fi
 
 # TODO: Untested below
 if carburator has program apt; then
-    carburator sudo apt update
-    carburator sudo apt -y install bash
+    apt-get -y update
+    apt-get -y install bash
 
 elif carburator has program pacman; then
-    carburator sudo pacman update
-    carburator sudo pacman -Suy bash
+    pacman update
+    pacman -Suy bash
 
 elif carburator has program yum; then
-    carburator sudo yum makecache --refresh
-    carburator sudo yum install bash
+    yum makecache --refresh
+    yum install bash
 
 elif carburator has program dnf; then
-    carburator sudo dnf makecache --refresh
-    carburator sudo dnf -y install bash
+    dnf makecache --refresh
+    dnf install bash -y
 
 else
     carburator print terminal error \
